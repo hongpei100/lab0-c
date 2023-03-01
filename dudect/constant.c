@@ -1,8 +1,8 @@
+#include "constant.h"
 #include <assert.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include <string.h>
-
-#include "constant.h"
 #include "cpucycles.h"
 #include "queue.h"
 #include "random.h"
