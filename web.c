@@ -11,6 +11,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
+
 #define LISTENQ 1024 /* second argument to listen() */
 #define MAXLINE 1024 /* max length of a line */
 #define BUFSIZE 1024
@@ -150,6 +151,9 @@ int web_open(int port)
     if (bind(listenfd, (struct sockaddr *) &serveraddr, sizeof(serveraddr)) < 0)
         return -1;
 
+    // int flags = fcntl(listenfd, F_GETFL);
+    // fcntl(listenfd, F_SETFL, flags | O_NONBLOCK);
+
     /* Make it a listening socket ready to accept connection requests */
     if (listen(listenfd, LISTENQ) < 0)
         return -1;
@@ -211,6 +215,7 @@ static void parse_request(int fd, http_request_t *req)
     url_decode(filename, req->filename, MAXLINE);
 }
 
+// 等同於 process
 char *web_recv(int fd, struct sockaddr_in *clientaddr)
 {
     http_request_t req;
