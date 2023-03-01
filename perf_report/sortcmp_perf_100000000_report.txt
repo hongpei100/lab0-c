@@ -1,0 +1,17 @@
+# started on Sat Feb 25 21:17:23 2023
+
+
+ Performance counter stats for 'CPU(s) 1,2,3,4,5,6,7' (10 runs):
+
+       630,853,888      branches                                                      ( +-  3.92% )  (27.08%)
+     5,085,136,193      instructions              #    0.54  insn per cycle           ( +-  2.65% )  (30.12%)
+             1,423      context-switches                                              ( +- 11.66% )
+     9,329,504,976      cpu-cycles                                                    ( +-  1.74% )  (33.16%)
+       138,576,715      cache-misses              #   53.374 % of all cache refs      ( +-  0.96% )  (32.98%)
+       254,038,731      cache-references                                              ( +-  2.11% )  (32.80%)
+     1,173,757,396      L1-dcache-loads                                               ( +-  3.47% )  (32.70%)
+     3,321,200,400 ns   system_time                                                   ( +-  0.82% )
+    12,635,215,600 ns   user_time                                                     ( +-  0.09% )
+
+           2.28007 +- 0.00572 seconds time elapsed  ( +-  0.25% )
+
