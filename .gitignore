@@ -24,3 +24,9 @@ GPATH
 GRTAGS
 GSYMS
 GTAGS
+
+# Others
+insert_head.txt
+perf_sort_cmp.py
+test_loop.py
+test_loop2.py
